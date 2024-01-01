@@ -3,25 +3,53 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --color-mymain: 43 255 6;
+  --color-mysec: 212 212 216;
+  --color-mytext: 255 255 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --color-mymain: 43 255 6;
+    --color-mysec: 212 212 216;
+    --color-mytext: 255 255 255;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 120%;
+}
+h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+h3 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+h4 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+h5 {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.btn {
+  border-radius: 5px;
+  padding: 0.7rem 2.2rem;
+  font-weight: 700;
+  color: #111;
+  text-transform: capitalize;
+  transition: .15s ease-in-out;
+}
+.btn:hover {
+  transform: translateY(-4px);
+}
+@media (max-width: 981px) {
+  :root {
+    font-size: 12px;
+  }
 }
