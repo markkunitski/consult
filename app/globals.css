@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 :root {
+  scroll-behavior: smooth;
+  color: #fff;
+  background-color: #111;
   --color-mymain: 43 255 6;
   --color-mysec: 212 212 216;
   --color-mytext: 255 255 255;
@@ -15,15 +18,22 @@
     --color-mytext: 255 255 255;
   }
 }
-
+.section {
+  max-width: 1280px;
+  margin-inline: auto;
+  margin-bottom: 16rem;
+}
 h1 {
+  text-transform: uppercase;
   font-size: 2.8rem;
   font-weight: 700;
-  line-height: 120%;
+  line-height: 125%;
 }
 h2 {
+  text-transform: uppercase;
   font-size: 2.4rem;
   font-weight: 700;
+  line-height: 125%;
 }
 h3 {
   font-size: 2rem;
@@ -35,21 +45,84 @@ h4 {
 }
 h5 {
   font-size: 1.2rem;
-  font-weight: 700;
 }
 .btn {
+  font-size: 14px;
   border-radius: 5px;
   padding: 0.7rem 2.2rem;
   font-weight: 700;
-  color: #111;
+  color: #000000;
   text-transform: capitalize;
-  transition: .15s ease-in-out;
+  transition: 0.15s ease-in-out;
+}
+.glow {
+  transition: 0.15s ease;
+  border: 3px solid #00ff1e;
+  background-color: rgba(0, 255, 30, .1);
+  border-radius: 1rem;
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(0, 255, 30, 0.9);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(0, 255, 30, 0.9);
+  box-shadow: 0px 0px 15px 0px rgba(0, 255, 30, 0.9);
+}
+.glowp {
+  border-radius: 1rem;
+  transition: 0.15s ease;
+  border: 3px solid #9000ff;
+  background-color: rgba(144, 0, 255, 0.1);
+  -webkit-box-shadow: 0px 0px 15px 0px rgba(144, 0, 255, 0.9);
+  -moz-box-shadow: 0px 0px 15px 0px rgba(144, 0, 255, 0.9);
+  box-shadow: 0px 0px 15px 0px rgba(144, 0, 255, 0.9);
+}
+.glowp:hover {
+  background-color: #6500b2;
+
+  -webkit-box-shadow: 0px 0px 35px 0px rgba(144, 0, 255, 0.9);
+  -moz-box-shadow: 0px 0px 35px 0px rgba(144, 0, 255, 0.9);
+  box-shadow: 0px 0px 35px 0px rgba(144, 0, 255, 0.9);
+}
+.glow:hover {
+  background-color: #00aa14;
+
+  -webkit-box-shadow: 0px 0px 35px 0px rgba(0, 255, 30, 0.9);
+  -moz-box-shadow: 0px 0px 35px 0px rgba(0, 255, 30, 0.9);
+  box-shadow: 0px 0px 35px 0px rgba(0, 255, 30, 0.9);
+}
+.upper-text span, label{
+  font-size: 14px;
+  color: #666;
+  font-weight: 700;
+  margin-bottom: .8rem;
+  display: block;
+}
+.input {
+  border: none;
+}
+
+.upper-text{
+  margin-bottom: 2.2rem;
 }
 .btn:hover {
   transform: translateY(-4px);
 }
+.uscard {
+  border-radius: 1rem;
+  min-height: 12rem;
+}
+.link {
+  transition: .15s ease;
+  font-weight: 700;
+  text-decoration: underline;
+  color: #00ff1e;
+}
+.link:hover {
+  color: #00bf16;
+}
+p {
+  line-height: 1.65rem;
+}
+
 @media (max-width: 981px) {
   :root {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
